@@ -3,4 +3,47 @@ $sec-color: #eeeeee;
 body {
       background: $sec-color;
       color: $pri-color;
+      margin: 20px;
+}
+
+nav, footer {
+      background: $pri-color;
+      padding: 10px;
+      height: 30px;
+      color: $sec-color;
+      a {
+            color: $sec-color;
+      }
+
+      img {
+            height: 30px;
+      }
+}
+span.left {
+      float: left;
+}
+span.right {
+      float: right;
+}
+
+.file-item {
+      margin: 20px;
+      width: 200px;
+      height: 200px;
+      border: solid $pri-color;
+	flex: 0 0 auto;
+	-webkit-flex: 0 0 auto;
+}
+
+.show {
+	width: 80%;
+	margin: auto;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: space-around;
+	-webkit-flex-wrap: wrap;
+	-webkit-flex-direction: row;
+	-webkit-justify-content: space-around;
 }

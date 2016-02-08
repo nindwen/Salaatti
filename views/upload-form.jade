@@ -1,8 +1,24 @@
 include ./includes/head.jade
 
 form(method="post" action="/" enctype="multipart/form-data")
+      p Tiedosto
       input(type="file", name="file")
+
+      p Tiedoston nimi
+      input(type="text", name="name")
+
+      p Tiedoston kuvaus
+      input(type="textarea", name="comment")
+
+      p Lähettäjä
+      input(type="text", name="sender")
+
+      p Moderointiavain
+      input(type="password", name="modkey")
+
+      p Näkyvä
       input(type="checkbox", name="visible")
+
       input(type="submit", name="submit")
 
 include ./includes/foot.jade
