@@ -48,5 +48,5 @@ app.use(express.static('/home/public/files'));
 
 
 app.listen(4242, function () {
-      console.log('Example app listening on port 4242!');
+      console.log('Salaatti listening on port 4242.');
 });
