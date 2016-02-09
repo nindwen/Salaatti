@@ -7,3 +7,9 @@ During upload the user can choose if they want the file to be listed on the fron
 [demo](http://salaatti.usvs.xyz/)
 
 WIP
+
+TODO
+====
+ * Search and limited listing
+ * Moderation of own files
+
