@@ -11,6 +11,7 @@ nav, footer {
       background: $pri-color;
       padding: 10px;
       height: 30px;
+      border-radius: 4px;
       color: $sec-color;
       display: flex;
       display: -webkit-flex;
@@ -43,7 +44,8 @@ nav, footer {
       margin: 20px;
       width: 200px;
       height: 300px;
-      border: solid $pri-color;
+      border: 1px solid $pri-color;
+      border-radius: 4px;
       flex: 0 0 auto;
       -webkit-flex: 0 0 auto;
       overflow: hidden;
