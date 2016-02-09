@@ -1,6 +1,5 @@
 .sass-cache/
 node_modules/
-package.json
-static/
 files/
+static/css/
 thumbnails/
