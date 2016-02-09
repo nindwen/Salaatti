@@ -5,13 +5,15 @@ body {
       background: $sec-color;
       color: $pri-color;
       margin: 20px;
+      @media only screen and (max-width: 768px) {
+            margin: 0px;
+      }
 }
 
 nav, footer {
       background: $pri-color;
       padding: 10px;
       height: 30px;
-      border-radius: 4px;
       color: $sec-color;
       display: flex;
       display: -webkit-flex;
@@ -41,6 +43,7 @@ nav, footer {
 }
 
 .file-item {
+      box-shadow: 2px 2px 10px $pri-color;
       margin: 20px;
       width: 200px;
       height: 300px;
@@ -92,8 +95,11 @@ nav, footer {
 
 form {
       width: 500px;
+      max-width:100%;
       margin: auto;
       text-align: center;
+
+
 }
 
 input:disabled {
@@ -107,6 +113,11 @@ td {
 }
 td.left {
       text-align: right;
+      @media only screen and (max-width: 768px) {
+            max-width: 20%;
+            overflow:hidden;
+            text-align:left;
+      }
 }
 td.right {
       text-align:left;
