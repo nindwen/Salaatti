@@ -12,19 +12,31 @@ nav, footer {
       padding: 10px;
       height: 30px;
       color: $sec-color;
+      display: flex;
+      display: -webkit-flex;
+      flex-direction: row;
+      justify-content: space-between;
+      -webkit-flex-direction: row;
+      -webkit-justify-content: space-between;
+      align-items: center;
+      -webkit-align-items: center;
       a {
             color: $sec-color;
       }
 
       img {
+            position: relative;
+            top: -2px;
             height: 30px;
+            vertical-align:middle;
+            padding-left:10px;
       }
-}
-span.left {
-      float: left;
-}
-span.right {
-      float: right;
+
+      .left {
+      }
+      .right {
+            vertical-align: middle;
+      }
 }
 
 .file-item {
