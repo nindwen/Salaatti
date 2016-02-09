@@ -10,8 +10,10 @@ div.show
                         div.title= fname
                         img.thumb(src="thumb-" + val.filename)
                   div.desc= val.comment
-                  if val.uploader
-                        span.sender= "by: " + val.uploader
-                  span.time= val.time
+                  div
+                        if val.uploader
+                              span.sender= "by: " + val.uploader
+                        br
+                        span.time= val.time
 
 include ./includes/foot.jade

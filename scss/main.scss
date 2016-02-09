@@ -57,12 +57,13 @@ nav, footer {
       display: -webkit-flex;
       flex-direction: column;
       -webkit-flex-direction: column;
-      justify-content: space-around;
-      -webkit-justify-content: space-around;
+      justify-content: space-between;
+      -webkit-justify-content: space-between;
+      padding-bottom: 10px;
+      padding-top: 10px;
 
       .title {
             font-size: 16pt;
-            padding: 10px;
       }
 
       img {
@@ -74,6 +75,9 @@ nav, footer {
       }
 
       .desc {
+            max-height: 4em;
+            overflow:hidden;
+            margin: 5px;
       }
 }
 
@@ -98,7 +102,6 @@ form {
       max-width:100%;
       margin: auto;
       text-align: center;
-
 
 }
 
