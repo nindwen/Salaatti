@@ -5,14 +5,14 @@ module.exports = {
             res.render('upload-form',{});
       },
 
-      upload: function (req, res, file) {
+      upload: function (req, res, next) {
             if(req.body.visible == 'on') {
                   db.upload(req.body, req.file, function(error) {
                         res.redirect('/msg-'+error);
                   });
             }
             else {
-                  res.send(file.filename);
+                  res.redirect(req.file.filename);
             }
       },
 
