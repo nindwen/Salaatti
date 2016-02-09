@@ -12,10 +12,10 @@ module.exports = {
                   case "jpg":
                   case "jpeg":
                   case "bmp":
-                        res.sendFile("/home/nindwen/usr/project/salaatti/thumbnails/" + req.params[0]);
+                        res.sendFile("/home/nindwen/app/Salaatti/thumbnails/" + req.params[0]);
                         break;
                   default:
-                        res.sendFile("/home/nindwen/usr/project/salaatti/static/ikoni.png");
+                        res.sendFile("/home/nindwen/app/Salaatti/static/ikoni.png");
                         break;
             }
       }

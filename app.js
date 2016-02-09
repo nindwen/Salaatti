@@ -33,7 +33,7 @@ app.get('/upload', upload.dispatch);
 
 var storage = multer.diskStorage({
       destination: function( req, file, cb) {
-            cb(null,'files')
+            cb(null,'/home/public/files')
       },
       filename: function(req, file, cb) {
             cb(null, hashids.encode(Date.now()) + "-" + file.originalname)
@@ -44,9 +44,9 @@ app.post('/', upmulter.single('file'), upload.upload);
 
 
 app.use(express.static('static'));
-app.use(express.static('files'));
+app.use(express.static('/home/public/files'));
 
 
 app.listen(4242, function () {
-      console.log('Example app listening on port 3000!');
+      console.log('Example app listening on port 4242!');
 });
