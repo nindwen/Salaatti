@@ -1,24 +1,41 @@
 include ./includes/head.jade
 
 form(method="post" action="/" enctype="multipart/form-data")
-      p Tiedosto
-      input(type="file", name="file")
+      table
+            tr
+                  td.left File
+                  td.right
+                        input(type="file", name="file", id="file", onchange="updateForm();")
 
-      p Tiedoston nimi
-      input(type="text", name="name")
+            tr 
+                  td.left 
+                        label(for="visible") Visible
+                  td.right
+                        input(type="checkbox", id="visible", name="visible", checked="true" onchange="updateVisible();")
 
-      p Tiedoston kuvaus
-      input(type="textarea", name="comment")
+            tr
+                  td.left Title
+                  td.right
+                        input(type="text", id="name", name="name", maxlength="20")
 
-      p Lähettäjä
-      input(type="text", name="sender")
+            tr
+                  td.left Description
+                  td.right
+                        textarea(type="textarea", id="comment", name="comment", maxlength="400")
 
-      p Moderointiavain
-      input(type="password", name="modkey")
+            tr
+                  td.left Sender
+                  td.right
+                        input(type="text", id="sender", name="sender", maxlength="20")
 
-      p Näkyvä
-      input(type="checkbox", name="visible")
+            tr
+                  td.left Moderation key
+                  td.right
+                        input(type="password", id="modkey", name="modkey", maxlength="20")
 
+      br
       input(type="submit", name="submit")
+
+      p Hidden files are accessible by url or shell access. Visible files can have names and descriptions and are shown on the front page.
 
 include ./includes/foot.jade

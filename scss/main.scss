@@ -1,5 +1,6 @@
 $pri-color : #444;
 $sec-color: #eeeeee;
+$tri-color: #aaaaaa;
 body {
       background: $sec-color;
       color: $pri-color;
@@ -29,21 +30,71 @@ span.right {
 .file-item {
       margin: 20px;
       width: 200px;
-      height: 200px;
+      height: 300px;
       border: solid $pri-color;
-	flex: 0 0 auto;
-	-webkit-flex: 0 0 auto;
+      flex: 0 0 auto;
+      -webkit-flex: 0 0 auto;
+      overflow: hidden;
+      text-align: center;
+      display: flex;
+      display: -webkit-flex;
+      flex-direction: column;
+      -webkit-flex-direction: column;
+      justify-content: space-around;
+      -webkit-justify-content: space-around;
+
+      .title {
+            font-size: 16pt;
+            padding: 10px;
+      }
+
+      img {
+            max-height: 150px;
+      }
+
+      .time {
+            color: $tri-color;
+      }
+
+      .desc {
+      }
 }
 
 .show {
-	width: 80%;
-	margin: auto;
-	display: flex;
-	display: -webkit-flex;
-	flex-wrap: wrap;
-	flex-direction: row;
-	justify-content: space-around;
-	-webkit-flex-wrap: wrap;
-	-webkit-flex-direction: row;
-	-webkit-justify-content: space-around;
+      width: 80%;
+      margin: auto;
+      display: flex;
+      display: -webkit-flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: space-around;
+      -webkit-flex-wrap: wrap;
+      -webkit-flex-direction: row;
+      -webkit-justify-content: space-around;
+
 }
+
+// Form
+
+form {
+      width: 500px;
+      margin: auto;
+      text-align: center;
+}
+
+input:disabled {
+      background: $tri-color;
+}
+
+td {
+      padding: 5px;
+      border-bottom: 1px solid $tri-color;
+
+}
+td.left {
+      text-align: right;
+}
+td.right {
+      text-align:left;
+}
+

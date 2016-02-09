@@ -6,11 +6,9 @@ module.exports = {
       },
 
       upload: function (req, res, file) {
-            console.log(req.body);
-            console.log(req.file);
             if(req.body.visible == 'on') {
-                  db.upload(req.body, req.file, function(ok) {
-                        res.redirect('/');
+                  db.upload(req.body, req.file, function(error) {
+                        res.redirect('/msg-'+error);
                   });
             }
             else {

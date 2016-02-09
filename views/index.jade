@@ -4,10 +4,14 @@ h1= message
 div.show
       each val in imgs
             div.file-item
-                  img(src="thumb-" + val.filename)
-                  a(href=val.filename)= val.filename
-                  p= "Desc: " + val.comment
-                  p= "By: " + val.sender
-                  p= val.time
+                  - var fname = "lol"
+                  - if(!val.name || val.name == '') { fname = val.filename.replace(/^.*-/,'') } else { fname = val.name }
+                  a(href=val.filename)
+                        div.title= fname
+                        img.thumb(src="thumb-" + val.filename)
+                  div.desc= val.comment
+                  if val.uploader
+                        span.sender= "by: " + val.uploader
+                  span.time= val.time
 
 include ./includes/foot.jade
