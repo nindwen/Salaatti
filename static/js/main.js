@@ -10,8 +10,7 @@ function updateForm() {
 
 function updateVisible() {
       var visible = document.getElementById('visible').checked;
-
-      var name = document.getElementById('name');
+var name = document.getElementById('name');
       name.disabled = !visible;
       var name = document.getElementById('comment');
       comment.disabled = !visible;
@@ -19,7 +18,15 @@ function updateVisible() {
       sender.disabled = !visible;
       var name = document.getElementById('modkey');
       modkey.disabled = !visible;
-
-
-
 }
+
+function updateName() {
+      var name = document.getElementById('sender').value;
+      localStorage.setItem("sender", name);
+}
+
+document.body.onload = function() {
+      var name = document.getElementById('sender');
+      name.value = localStorage.getItem("sender");
+}
+      

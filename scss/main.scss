@@ -1,6 +1,7 @@
 $pri-color : #444;
 $sec-color: #eeeeee;
 $tri-color: #aaaaaa;
+
 body {
       background: $sec-color;
       color: $pri-color;
@@ -23,6 +24,7 @@ nav, footer {
       -webkit-justify-content: space-between;
       align-items: center;
       -webkit-align-items: center;
+
       a {
             color: $sec-color;
       }
@@ -37,47 +39,9 @@ nav, footer {
 
       .left {
       }
+
       .right {
             vertical-align: middle;
-      }
-}
-
-.file-item {
-      box-shadow: 2px 2px 10px $pri-color;
-      margin: 20px;
-      width: 200px;
-      height: 300px;
-      border: 1px solid $pri-color;
-      border-radius: 4px;
-      flex: 0 0 auto;
-      -webkit-flex: 0 0 auto;
-      overflow: hidden;
-      text-align: center;
-      display: flex;
-      display: -webkit-flex;
-      flex-direction: column;
-      -webkit-flex-direction: column;
-      justify-content: space-between;
-      -webkit-justify-content: space-between;
-      padding-bottom: 10px;
-      padding-top: 10px;
-
-      .title {
-            font-size: 16pt;
-      }
-
-      img {
-            max-height: 150px;
-      }
-
-      .time {
-            color: $tri-color;
-      }
-
-      .desc {
-            max-height: 4em;
-            overflow:hidden;
-            margin: 5px;
       }
 }
 
@@ -93,7 +57,47 @@ nav, footer {
       -webkit-flex-direction: row;
       -webkit-justify-content: space-around;
 
+      .file-item {
+            box-shadow: 2px 2px 10px $pri-color;
+            margin: 20px;
+            width: 200px;
+            height: 300px;
+            border: 1px solid $pri-color;
+            border-radius: 4px;
+            flex: 0 0 auto;
+            -webkit-flex: 0 0 auto;
+            overflow: hidden;
+            text-align: center;
+            display: flex;
+            display: -webkit-flex;
+            flex-direction: column;
+            -webkit-flex-direction: column;
+            justify-content: space-between;
+            -webkit-justify-content: space-between;
+            padding-bottom: 10px;
+            padding-top: 10px;
+
+            .title {
+                  font-size: 16pt;
+            }
+
+            img {
+                  max-height: 150px;
+            }
+
+            .time {
+                  color: $tri-color;
+            }
+
+            .desc {
+                  max-height: 4em;
+                  overflow:hidden;
+                  margin: 5px;
+            }
+      }
 }
+
+
 
 // Form
 
@@ -103,26 +107,39 @@ form {
       margin: auto;
       margin-top: 20px;
       text-align: center;
+
+      textarea, input {
+            width: 200px;
+      }
+
+      textarea:disabled, input:disabled {
+            background: $tri-color;
+      }
 }
 
-input:disabled {
-      background: $tri-color;
-}
 
-td {
-      padding: 5px;
-      border-bottom: 1px solid $tri-color;
+table {
+      width: 350px;
+      margin:auto;
 
-}
-td.left {
-      text-align: right;
-      @media only screen and (max-width: 768px) {
-            max-width: 20%;
-            overflow:hidden;
+      td {
+            padding: 5px;
+            border-bottom: 1px solid $tri-color;
+
+      }
+
+      td.left {
+            text-align: right;
+            @media only screen and (max-width: 768px) {
+                  max-width: 20%;
+                  overflow:hidden;
+                  text-align:left;
+            }
+      }
+
+      td.right {
             text-align:left;
       }
 }
-td.right {
-      text-align:left;
-}
+
 

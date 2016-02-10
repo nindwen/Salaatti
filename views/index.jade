@@ -8,12 +8,15 @@ div.show
                   - if(!val.name || val.name == '') { fname = val.filename.replace(/^.*-/,'') } else { fname = val.name }
                   a(href=val.filename)
                         div.title= fname
-                        img.thumb(src="thumb-" + val.filename)
-                  div.desc= val.comment
+                  div
+                        a(href=val.filename)
+                              img.thumb(src="thumb-" + val.filename)
+                        if val.comment
+                              div.desc= val.comment
                   div
                         if val.uploader
                               span.sender= "by: " + val.uploader
-                        br
+                              br
                         span.time= val.time
 
 include ./includes/foot.jade
