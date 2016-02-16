@@ -6,6 +6,7 @@ var thumb = require('node-thumbnail').thumb;
 var index = require('./models/index');
 var upload = require('./models/upload');
 var thumbs = require('./models/thumbs');
+var preview = require('./models/preview');
 
 thumb({
       source: './files',
@@ -28,6 +29,7 @@ app.get('/msg-*', index.dispatch);
 app.get('/', index.dispatch);
 
 app.get('/thumb-*', thumbs.parse);
+app.get('/preview-*', preview.parse);
 
 app.get('/upload', upload.dispatch);
 

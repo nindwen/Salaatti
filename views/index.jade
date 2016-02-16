@@ -9,7 +9,7 @@ div.show
                   a(href=val.filename)
                         div.title= fname
                   div
-                        a(href=val.filename)
+                        a(href="preview-"+ val.filename)
                               img.thumb(src="thumb-" + val.filename)
                         if val.comment
                               div.desc= val.comment
