@@ -4,14 +4,20 @@ block content
       h1= message
       div.show
             each val in imgs
-                  div.file-item
+                  if val.comment
+                        - var clas="with-desc"
+                  else
+                        - var clas="no-desc"
+                  div.file-item(class=clas)
                         - var fname = "lol"
                         - if(!val.name || val.name == '') { fname = val.filename.replace(/^.*-/,'') } else { fname = val.name }
-                        a(href=val.filename)
+                        a.title(href='preview-'+val.filename)
                               div.title= fname
                         div
                               a(href="preview-"+ val.filename)
                                     img.thumb(src="thumb-" + val.filename)
+                              br
+                              a(href=val.filename) raw
                               if val.comment
                                     div.desc= val.comment
                         div

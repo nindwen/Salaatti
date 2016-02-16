@@ -60,8 +60,8 @@ nav, footer {
       .file-item {
             box-shadow: 2px 2px 10px $pri-color;
             margin: 20px;
-            width: 200px;
-            height: 300px;
+            width: 220px;
+            height: 330px;
             border: 1px solid $pri-color;
             border-radius: 4px;
             flex: 0 0 auto;
@@ -79,10 +79,19 @@ nav, footer {
 
             .title {
                   font-size: 16pt;
+                  text-decoration: none;
+                  color: #494;
+                  font-weight: bold;
+                  word-wrap: break-word;
+                  padding: 5px;
+            }
+            div.title {
+                  border-bottom: 2px dotted;
             }
 
             img {
                   max-height: 150px;
+                  margin:0px;
             }
 
             .time {
@@ -90,9 +99,25 @@ nav, footer {
             }
 
             .desc {
-                  max-height: 4em;
+                  max-height: 2em;
                   overflow:hidden;
                   margin: 5px;
+            }
+
+
+            a, a:visited {
+                  color: #00f;
+            }
+
+      }
+
+      .file-item.with-desc:hover, .file-item.with-desc:focus {
+            .title {
+                  display:none;
+            }
+
+            .desc {
+                  max-height: 6em;
             }
       }
 }
