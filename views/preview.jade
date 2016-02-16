@@ -7,6 +7,9 @@ div.preview
                   code !{data}
       if type=="image"
             img(src=file)
+      if type=="audio"
+            audio(controls)
+                  source(src=file)
 
 
 //
