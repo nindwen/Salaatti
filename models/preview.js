@@ -14,7 +14,13 @@ module.exports = {
       parse: function(req,res) {
             var fname = req.params[0];
             var buffer = readChunk.sync('/home/public/files/' + fname, 0, 262);
-            var type = getType(fileType(buffer));
+            var type;
+            if(fileType(buffer) == null) {
+                  type = "text";
+            }
+            else {
+                  type = getType(fileType(buffer));
+            }
             console.log(type);
 
             switch(type) {
