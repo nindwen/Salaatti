@@ -3,11 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "nindwen",
-  "license": "ISC",
+  "license": "MIT",
+  "homepage": "https://github.com/nindwen/Salaatti",
   "dependencies": {
     "express": "^4.13.4",
     "file-type": "^3.7.0",
