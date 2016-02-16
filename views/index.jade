@@ -1,22 +1,21 @@
-include ./includes/head.jade
+extends ./layout.jade
 
-h1= message
-div.show
-      each val in imgs
-            div.file-item
-                  - var fname = "lol"
-                  - if(!val.name || val.name == '') { fname = val.filename.replace(/^.*-/,'') } else { fname = val.name }
-                  a(href=val.filename)
-                        div.title= fname
-                  div
-                        a(href="preview-"+ val.filename)
-                              img.thumb(src="thumb-" + val.filename)
-                        if val.comment
-                              div.desc= val.comment
-                  div
-                        if val.uploader
-                              span.sender= "by: " + val.uploader
-                              br
-                        span.time= val.time
-
-include ./includes/foot.jade
+block content
+      h1= message
+      div.show
+            each val in imgs
+                  div.file-item
+                        - var fname = "lol"
+                        - if(!val.name || val.name == '') { fname = val.filename.replace(/^.*-/,'') } else { fname = val.name }
+                        a(href=val.filename)
+                              div.title= fname
+                        div
+                              a(href="preview-"+ val.filename)
+                                    img.thumb(src="thumb-" + val.filename)
+                              if val.comment
+                                    div.desc= val.comment
+                        div
+                              if val.uploader
+                                    span.sender= "by: " + val.uploader
+                                    br
+                              span.time= val.time

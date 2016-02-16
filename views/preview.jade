@@ -1,55 +1,59 @@
-include ./includes/head.jade
-h1
-      a(href=file) #{file}
-div.preview
-      if type=="text"
-            pre.hljs
-                  code !{data}
-      if type=="image"
-            img(src=file)
-      if type=="audio"
-            audio(controls)
-                  source(src=file)
+extends ./layout.jade
+
+append style
+      style
+            include ./../static/css/railscasts.css
 
 
-//
-      h1 Edit
-      form(method="post" action="/" enctype="multipart/form-data")
-            table
-                  tr
-                        td.left File
-                        td.right
-                              input(type="file", name="file", id="file", onchange="updateForm();")
+block content
+      h1
+            a(href=file) #{file}
+      div.preview
+            if type=="text"
+                  pre.hljs
+                        code !{data}
+            if type=="image"
+                  img(src=file)
+            if type=="audio"
+                  audio(controls)
+                        source(src=file)
 
-                  tr 
-                        td.left 
-                              label(for="visible") Visible
-                        td.right
-                              input(type="checkbox", id="visible", name="visible", checked="true" onchange="updateVisible();")
 
-                  tr
-                        td.left Title
-                        td.right
-                              input(type="text", id="name", name="name", maxlength="20")
-
-                  tr
-                        td.left Description
-                        td.right
-                              textarea(type="textarea", id="comment", name="comment", maxlength="400")
-
-                  tr
-                        td.left Sender
-                        td.right
-                              input(type="text", id="sender", name="sender", maxlength="20", onchange="updateName();")
-
-                  //
+      //
+            h1 Edit
+            form(method="post" action="/" enctype="multipart/form-data")
+                  table
                         tr
-                        td.left Moderation key
-                        td.right
-                              input(type="password", id="modkey", name="modkey", maxlength="20")
+                              td.left File
+                              td.right
+                                    input(type="file", name="file", id="file", onchange="updateForm();")
 
-            br
-            input(type="submit", name="submit" value="Edit")
+                        tr 
+                              td.left 
+                                    label(for="visible") Visible
+                              td.right
+                                    input(type="checkbox", id="visible", name="visible", checked="true" onchange="updateVisible();")
 
+                        tr
+                              td.left Title
+                              td.right
+                                    input(type="text", id="name", name="name", maxlength="20")
 
-include ./includes/foot.jade
+                        tr
+                              td.left Description
+                              td.right
+                                    textarea(type="textarea", id="comment", name="comment", maxlength="400")
+
+                        tr
+                              td.left Sender
+                              td.right
+                                    input(type="text", id="sender", name="sender", maxlength="20", onchange="updateName();")
+
+                        //
+                              tr
+                              td.left Moderation key
+                              td.right
+                                    input(type="password", id="modkey", name="modkey", maxlength="20")
+
+                  br
+                  input(type="submit", name="submit" value="Edit")
