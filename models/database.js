@@ -36,6 +36,7 @@ module.exports = {
                   var d= new Date();
                   var isodate = d.getFullYear() + "-" + d.getMonth()+1 + "-" + d.getDate()
                         + " " + d.getHours() + ":" + d.getMinutes();
+                  isodate = "now";
                   var qr = client.query("INSERT INTO files \
                               (filename, name, mimetype, comment, time, uploader, modkey ) \
                               VALUES ($1, $2, $3, $4, $5, $6, $7)", 

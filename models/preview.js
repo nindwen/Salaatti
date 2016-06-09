@@ -16,12 +16,26 @@ module.exports = {
             var buffer = readChunk.sync('/home/public/files/' + fname, 0, 262);
             var type;
             if(fileType(buffer) == null) {
-                  type = "text";
+                  type = "other";
             }
             else {
                   type = getType(fileType(buffer));
             }
-            console.log(type);
+
+            if(type == "other") {
+                  switch(getExtension(fname)) {
+                        case "py":
+                        case "lua":
+                        case "java":
+                        case "c":
+                        case "cpp":
+                        case "jade":
+                        case "md":
+                        case "txt":
+                        case "rs":
+                              type = "text";
+                  }
+            }
 
             switch(type) {
                   case "image":

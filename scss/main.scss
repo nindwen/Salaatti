@@ -111,6 +111,7 @@ nav, footer {
 
       }
 
+      /*
       .file-item.with-desc:hover, .file-item.with-desc:focus {
             .title {
                   display:none;
@@ -120,6 +121,7 @@ nav, footer {
                   max-height: 6em;
             }
       }
+      */
 }
 
 
@@ -173,4 +175,7 @@ table {
       margin: auto;
       margin-top: 20px;
       padding: 20px;
+      img {
+            max-width: 100%;
+      }
 }
